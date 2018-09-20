@@ -1,3 +1,7 @@
+# Intent
+# Define an interface for createing an object but let subclasses decide which
+# class to instantiate. Factory method lets a class defer instantiation to subclasses
+
 class Shape
   def initialize(*args)
     puts "\n #{args}"
