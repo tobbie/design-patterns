@@ -1,6 +1,6 @@
 # Intent
 # Convert the interface of a class into another interface clients expect.
-# Adapter lets classes work together that couldn’t otherwise because of
+# Adapter lets classes work together that could not otherwise because of
 # incompatible interfaces
 
 class Hammer
