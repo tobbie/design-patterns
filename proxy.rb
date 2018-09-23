@@ -1,5 +1,5 @@
 # Intent
-#
+# provide a surrugate / placeholder for another object to control access to it.
 
 class Account
   attr_reader :balance
