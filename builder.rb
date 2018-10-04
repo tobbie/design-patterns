@@ -1,7 +1,6 @@
 # Intent
 # Seperate the construction of a complex object from its representation so that
 # the same construction process can create different representations.
-
 # A builder class is primarily intent on configuring an object
 
 class GuitarBuilder
@@ -12,13 +11,13 @@ class GuitarBuilder
   end
 
   def guitar
-    raise "too few string" if @guitar.number_of_strings < 4
-    raise "too many string" if @guitar.number_of_strings > 8
-    raise "improper body" if @guitar.body.width > 32 || @guitar.body.depth > 12
+    raise "Too few strings" if @guitar.number_of_strings < 4
+    raise "Too many strings" if @guitar.number_of_strings > 8
+    raise "Improper body" if @guitar.body.width > 32 || @guitar.body.depth > 12
     @guitar
   end
 
-  def select_number_of_strings(number)
+  def place_strings(number)
     @guitar.build_strings(number)
   end
 
@@ -64,9 +63,9 @@ class GuitarBody
 end
 
 guitar_builder = GuitarBuilder.new
-guitar_builder.select_number_of_strings(6)
+guitar_builder.place_strings(6)
 guitar_builder.craft_body(12, 24)
-guitar_builder.paint_body("red")
+guitar_builder.paint_body("orange")
 guitar = guitar_builder.guitar
 
 p guitar.body
