@@ -21,20 +21,14 @@ class Context
   end
 end
 
-class State
-  def handle(context)
-    raise NotImplementedError, "handle must be defined in subclass"
-  end
-end
-
-class ConcreteStateA < State
+class ConcreteStateA 
   def handle(context)
     puts "Handling ConcreteStateA"
     context.set_state(ConcreteStateB.new)
   end
 end
 
-class ConcreteStateB < State
+class ConcreteStateB 
   def handle(context)
     puts "Handling ConcreteStateB"
     context.set_state(ConcreteStateA.new)

@@ -28,6 +28,10 @@ class CoffeeWithSugar
   def price
     @coffee.price += 0.25
   end
+
+  def indeuce_suger_rush
+    p 'sugar rush induced'
+  end
 end
 
 coffee = Coffee.new

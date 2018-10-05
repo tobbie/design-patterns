@@ -36,7 +36,7 @@ class Context
   end
 end
 
-context_object = Context.new("AAAAAABBBBCCCCDDDD")
+context_object = Context.new("AAABBBCCCDDD")
 expression_list = Array.new
 expression_list << TerminalExpression.new
 expression_list << NonTerminalExpression.new
@@ -45,3 +45,4 @@ expression_list << TerminalExpression.new
 for expression in expression_list
   expression.interpret(context_object)
 end
+p context_object.get_expression

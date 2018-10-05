@@ -5,7 +5,7 @@
 
 class Hammer
   def swing
-    p 'hit a nail'
+    p 'Hit a nail'
   end
 end
 
@@ -20,12 +20,12 @@ class Tool
 end
 
 class ToolAdapter
-  def initialize(hammer)
-    @hammer = hammer
+  def initialize(tool)
+    @tool = tool
   end
 
   def use_tool
-    @hammer.swing
+    @tool.swing
   end
 end
 

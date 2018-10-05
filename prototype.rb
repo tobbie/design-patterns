@@ -2,13 +2,9 @@
 # Specify the kinds of objects to create using a prototypical instance, and
 # create new objects by copying this prototype.
 
-class Prototype
-  def _clone
-    raise NotImplementedError, 'clone() must be defined in subclass'
-  end
-end
 
-class PizzaPrototype < Prototype
+class PizzaPrototype 
+
   def _clone
     return self.clone
   end
@@ -33,4 +29,4 @@ end
 
 pizza_proto = PizzaPrototype.new
 pizza = pizza_proto._clone
-pizza.pizza_type(:pepperoni)
+pizza.pizza_type(:cheeze)

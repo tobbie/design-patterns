@@ -36,7 +36,4 @@ my_portfolio.add_account(Account.new('Bonds', 200))
 my_portfolio.add_account(Account.new('Stocks', 100))
 my_portfolio.add_account(Account.new('Real Estate', 1000))
 
-my_portfolio.any? { |account| account.balance > 2000 }
-my_portfolio.all? { |account| account.balance >= 10 }
 my_portfolio.each { |account| puts "#{account.name}: #{account.balance}" }
-my_portfolio.map { |account| account.balance }

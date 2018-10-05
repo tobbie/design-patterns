@@ -46,11 +46,11 @@ class Cart
   end
 
   def add_item(item)
-    puts "Item added - #{item}"
+    puts "Item added"
   end
 
   def remove_item(item)
-    puts "#{item} removed"
+    puts "Item removed"
   end
 end
 

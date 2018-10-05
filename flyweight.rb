@@ -59,6 +59,6 @@ flyweight_factory = FlyweightFactory.new
 flyweight1 = flyweight_factory.get_flyweight("flyweight1")
 flyweight1.operation(10)
 
-flyweight2 = flyweight_factory.get_flyweight("flyweight2")
+flyweight2 = flyweight_factory.get_flyweight("flyweight1")
 flyweight2.operation(20)
   

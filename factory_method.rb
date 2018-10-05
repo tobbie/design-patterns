@@ -4,7 +4,11 @@
 
 class Shape
   def initialize(*args)
-    puts "\n #{args}"
+    puts "#{args}"
+  end
+
+  def draw
+    raise NotImplementedError, "draw() must be defined"
   end
 end
 
@@ -17,6 +21,12 @@ end
 class Square < Shape
   def draw
     puts "drawing square"
+  end
+end
+
+class Cirle < Shape
+  def draw
+    puts "drawing circle"
   end
 end
 
@@ -38,3 +48,4 @@ triangle.draw
 square = ShapeFactory.build(:square, 4)
 square.draw
 circle = ShapeFactory.build(:circle, 3)
+circle.draw

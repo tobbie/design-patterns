@@ -16,13 +16,13 @@ end
 
 class ShapeImplementor
   def draw_rectangle
-    raise "draw_rectangle must be implemented"
+    raise "draw_rectangle() must be implemented"
   end
 end
 
 class Windows < ShapeImplementor
   def draw_rectangle
-    p "drawing a rectangle on windows"
+    p "drawing a rectangle on Windows"
   end
 end
 

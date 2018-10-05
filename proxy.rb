@@ -1,5 +1,6 @@
 # Intent
 # provide a surrugate / placeholder for another object to control access to it.
+require 'etc'
 
 class Account
   attr_reader :balance
@@ -39,8 +40,8 @@ class AccountProtectionProxy
   end
 
   def check_access
-    if @owner_name != 'Rolake'
-      raise "Illegal access"
+    if Etc.getlogin != @owner_name
+      raise "Illegal access, #{Etc.getlogin} cannot acceess"
     end
   end
 end
@@ -48,8 +49,9 @@ end
 account = Account.new(100)
 account.deposit(50)
 account.withdraw(10)
+p account.balance
 
-proxy = AccountProtectionProxy.new(account, 'Rolake')
+proxy = AccountProtectionProxy.new(account, 'bamroc')
 proxy.deposit(20)
 proxy.withdraw(40)
 puts proxy.balance

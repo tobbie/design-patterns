@@ -9,14 +9,13 @@ class Animal
     @name = name
   end
 
-  def eat
-  end
+  def eat; end
 
-  def speak
-  end
+  def speak; end
 end
 
 class Tiger < Animal
+
   def eat
     puts "Tiger #{name} eats meat"
   end
