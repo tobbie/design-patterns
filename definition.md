@@ -122,18 +122,15 @@ It calls my_portfolio.each(|aacount| p "#{acount.name}")
 
 
 
-14. Mediator design pattern: reduce communication complexity between multiple objects or classes. This pattern provides a mediator class which normally handles all the communications between different classes and supports easy maintenance of the code by loose coupling.
+14. Mediator design pattern: reduce communication complexity between multiple objects or classes. 
 
-With the Mediator pattern, this can be accomplished by creating a mediator object which handles the communication between a group of objects while leaving those objects completely decoupled from one another, and completely unaware of the mediator object itself. Here, we are creating
-a new List instance, passing it in a list of fruits. We are also creating a text_field instance and a mediator instance, which takes both the list instance and the text_field instance as parameters. Now, at last, we can see the Mediator pattern in action. As the value of the text_field changes to "a", the mediator, which is an observer on the text_field instance, narrows the list down. As the user continues to type, the mediator continues to narrow the list of words. Neither the list, nor the text_field 'colleagues' are aware of one another. And, neither the list, nor the text_field are aware of the mediator. The 'save_to_memento' method will create (originate) a new memento object, passing it a value that is representative of the current state of this originator object.we restore the state of the originator to the state that has been captured within the memento object of the caretaker object. The originator's state will be restored from "name:bar" back to the previous state of "name:foo"
+In this example of the Mediator pattern, we have a text field which will receive input from a user. As that input changes, a list of words that the user can select from will be narrowed down to include only those words beginning with the string of text entered by the user. For example, if the user types 'a', then the list of words to choose from will be narrowed down to include only the words in the list beginning with the letter 'a'. At last, we can see the Mediator pattern in action. As the value of the text_field changes to "a", the mediator, which is an observer on the text_field instance, narrows the list down.
 
 
 
 15. Memento design pattern: is used to restore state of an object to a previous state. 
 
-The originator creates and passes a memento to a special class called a caretaker. The sole responsibility of the caretaker is to maintain the memento object of the originator. Then, at a later time, the originator can restore itself to a previous state by setting it’s state to the state encapsulated in the memento object of its caretaker. The 'Originator' of the Memento pattern is an object that is responsible for saving its state by creating a memento and then passing a representation of its state into that memento, to be restored at a later time.
-Here, we are creating
-a new List instance, passing it in a list of fruits. We are also creating a text_field instance and a mediator instance, which takes both the list instance and the text_field instance as parameters. Now, at last, we can see the Mediator pattern in action. As the value of the text_field changes to "a", the mediator, which is an observer on the text_field instance, narrows the list down. As the user continues to type, the mediator continues to narrow the list of words. Neither the list, nor the text_field 'colleagues' are aware of one another. And, neither the list, nor the text_field are aware of the mediator. The 'save_to_memento' method will create (originate) a new memento object, passing it a value that is representative of the current state of this originator object.we restore the state of the originator to the state that has been captured within the memento object of the caretaker object. The originator's state will be restored from "name:bar" back to the previous state of "name:foo"
+ The originator creates and passes a memento to a special class called a caretaker. The sole responsibility of the caretaker is to maintain the memento object of the originator. Then, at a later time, the originator can restore itself to a previous state by setting it’s state to the state encapsulated in the memento object of its caretaker.
 
 
 16. Obesrver pattern: Define a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
@@ -162,15 +159,14 @@ context.request
 
 20. Strategy design pattern: Here, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. 
 
-In the example attached, an instance of the Car class accepts an engine strategy. There are two engine strategies defined, StraightSixEngine and V8Engine. Each encapsulates a variant of an engine algorithm. Each shares a common interface. Be sure to couple clients to the interface shared by each of the strategies, and not to any concrete strategy
+In the example attached, an instance of the Car class accepts an engine strategy. There are two engine strategies defined, StraightSixEngine and V8Engine. Each encapsulates a variant of an engine algorithm. Each shares a common interface. 
 
 21. Visitor design pattern: represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
-Order contains an array of product and exposes simple method to add new product to the list.Order contains an array of product and exposes simple method to aaccept a new product to the list. We can define operations in a separate classes and we can visit the order with that operation. Order will apply that operation to every product from the list. That way we don’t have to expose internal representation of products and we don’t have to extend Order or Product if we wan’t to add new operation.
+Order contains an array of product and exposes simple method to add new product to the list.Order contains an array of product and exposes simple method to accept a new product to the list. We can define operations in a separate classes and we can visit the order with that operation. Order will apply that operation to every product from the list. That way we don’t have to expose internal representation of products and we don’t have to extend Order or Product if we wan’t to add new operation.
 
 
-22. template_method design pattern: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses.Its subclasses can override the method implementation as per need but the invocation is to be in the same way as defined by an abstract class. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+22. template_method design pattern: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses.
 
-The #build_car method of the CarBuilder class defines an algorithm containing a step which is expected to vary, the #add_engine method. Therefore, we’ve elected to apply the Template Method pattern to the #add_engine step. It is to be defined in derivatives (subclasses) of the CarBuilder class.
-Derivative (Subclass) of CarBuilder.Determines which engine will be used for the build_car algotithm.
+The Order Class which includes the `Visitable module. Order will apply that operation to every product from the list. That way we don’t have to expose internal representation of products and we don’t have to extend Order or Product if we wan’t to add new operation.
 
