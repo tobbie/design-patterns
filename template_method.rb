@@ -5,13 +5,13 @@
 
 class CarBuilder
   def build_car
-    # assemble_body
-    # add_wheel
-    # add_tires
+    assemble_body
+    add_wheel
+    add_tires
     add_engine
-    # add_windows
-    # add_seats
-    # paint_car
+    add_windows
+    add_seats
+    paint_car
   end
   
   def add_engine

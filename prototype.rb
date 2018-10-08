@@ -29,4 +29,4 @@ end
 
 pizza_proto = PizzaPrototype.new
 pizza = pizza_proto._clone
-pizza.pizza_type(:cheeze)
+pizza.pizza_type(:pepperoni)
